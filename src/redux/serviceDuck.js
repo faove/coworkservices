@@ -191,7 +191,7 @@ export const deleteService = (id) => async (dispatch, getState) => {
         dispatch({
             type: DELETE_SERVICE,
             payload: {
-                array: id
+                array: response.id
             }
         }) 
     }catch (error){

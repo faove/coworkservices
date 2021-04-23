@@ -11,8 +11,8 @@ const GET_TYPEPRODUCTS = 'GET_TYPEPRODUCTS'
 export default function typeproductReducer(state = dataInicial, action){
     switch(action.type){
         case GET_TYPEPRODUCTS:  
-        console.log('typeproductReducer')
-        console.log(action.payload.array)
+        // console.log('typeproductReducer')
+        // console.log(action.payload.array)
             return {
                 ...state, 
                 array: action.payload.array

@@ -143,7 +143,7 @@ export const  deleteAssociate = (id) => async (dispatch, getState) => {
         dispatch({
             type: DELETE_ASSOCIATE,
             payload: {
-                array: id
+                array: response.id
             }
         }) 
     }catch (error){

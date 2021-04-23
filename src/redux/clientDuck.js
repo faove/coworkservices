@@ -166,7 +166,7 @@ export const  deleteClient = (id) => async (dispatch, getState) => {
         dispatch({
             type: DELETE_CLIENT,
             payload: {
-                array: id
+                array: response.id
             }
             
         }) 

@@ -148,7 +148,7 @@ export const  deleteCategory = (id) => async (dispatch, getState) => {
         dispatch({
             type: DELETE_CATEGORY,
             payload: {
-                array: id
+                array: response.id
             }
             
         }) 

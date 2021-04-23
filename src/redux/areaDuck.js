@@ -17,8 +17,8 @@ const UPDATE_AREA = 'UPDATE_AREA'
 export default function areaReducer(state = dataInicial, action){
     switch(action.type){
         case GET_AREA:  
-            console.log('GET_AREA')
-            console.log(action.payload.array)
+            // console.log('GET_AREA')
+            // console.log(action.payload.array)
             return {
                 ...state, 
                 array: action.payload.array
@@ -29,8 +29,8 @@ export default function areaReducer(state = dataInicial, action){
                 array: action.payload.array, offset: action.payload.offset
             }
         case GET_AREA_CATEG:  
-            console.log('GET_AREA_CATEG')
-            console.log(action.payload.array)
+            // console.log('GET_AREA_CATEG')
+            // console.log(action.payload.array)
             return {
                 ...state, 
                 array: action.payload.array
@@ -151,7 +151,7 @@ export const  deleteArea = (id) => async (dispatch, getState) => {
         dispatch({
             type: DELETE_AREA,
             payload: {
-                array: id
+                array: response.id
             }
         }) 
     }catch (error){

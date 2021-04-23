@@ -11,9 +11,11 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@material-ui/pickers": "^3.3.10",
+    "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "all": "0.0.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "compact": "^1.0.0",
@@ -21,12 +23,13 @@
     "dispatch": "^1.0.2",
     "isundefined": "^1.0.1",
     "notistack": "^1.0.5",
+    "npm-install-all": "^1.1.21",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-data-grid": "^7.0.0-canary.38",
     "react-datepicker": "^3.7.0",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.0.5",
+    "react-hook-form": "^7.2.3",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
@@ -35,7 +38,7 @@
     "react-window": "^1.8.6",
     "reactstrap": "^8.9.0",
     "reduce": "^1.0.2",
-    "redux-devtools": "^3.7.0",
+    "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sweetalert2": "^10.16.0",
     "web-vitals": "^1.1.1"
@@ -63,5 +66,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.7.0"
   }
 }

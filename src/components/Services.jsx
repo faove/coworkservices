@@ -84,6 +84,9 @@ const Services = () => {
     const [errorAssociate, setErrorAssociate] = useState(false)
     const [errorDate, setErrorDate] = useState(false)
 
+    //Manejo de function se monto o no
+    const [mount, setMount] = useState(false)
+
     const handleDateChange = (date) => {
       setErrorDate(false)
       setSelectedDate(date);
@@ -129,10 +132,13 @@ const Services = () => {
     //Este useEffect funciona como DidMount al momento de pintar todos los object
     useEffect(() => {
       // console.log('mounted')
-      dispatch(getCategory());
-      dispatch(getAssociate());
+      if (!mount){
+        setMount(true);
+        dispatch(getCategory());
+        dispatch(getAssociate());
+      };
       // console.log(associate)
-    }, []);
+    }, [mount]);
 
     
     //Controla el Autocomplete

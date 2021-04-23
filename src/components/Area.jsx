@@ -41,7 +41,7 @@ const Area = () => {
 
     //-------------------------------------------
     const [modoEdicion, setModoEdicion] = useState(false)
-    const [refreshKey, setRefreshKey] = useState(0);
+    const [refreshKey, setRefreshKey] = useState(false)
     const area = useSelector(store => store.area.array)
     const showstatus = useSelector(store => store.showstatus.array)
     const category = useSelector(store => store.category.array)
@@ -125,8 +125,12 @@ const Area = () => {
     useEffect(() => {
       // console.log('llamado a getCategArea')
       // console.log(areas)
-      dispatch(getCategArea());
-    },[refreshKey])
+      if (!refreshKey){
+        setRefreshKey(true);
+        dispatch(getCategArea());
+
+      }
+    },[refreshKey]);
 
     useEffect(() => {
         dispatch(getCategory());
@@ -188,7 +192,7 @@ const Area = () => {
         setCategorias(-1)
         setName(-1)
         setStatus(-1)
-        setRefreshKey(oldKey => oldKey + 1)
+        setRefreshKey(false)
         setError(false)
         setErrorStatus(false)
 

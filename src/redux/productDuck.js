@@ -148,7 +148,7 @@ export const  deleteProduct = (id) => async (dispatch, getState) => {
         dispatch({
             type: DELETE_PRODUCT,
             payload: {
-                array: id
+                array: response.id
             }
             
         }) 
